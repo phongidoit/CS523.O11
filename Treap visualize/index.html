@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+
+    <body>
+
+        <main>
+            <h1> TREAP VISUALIZER</h1>
+            <h2> This is a visualization of the treap data struture</h2>
+            <canvas id="canvas" width=" 1400" height = "800" > </canvas>
+        </main>
+    </body>
+</html>
+
+<script>
+    const canvas = document.getElementById("canvas");
+    var ctx   = canvas.getContext("2d");
+
+    //change maxx   ID of node here
+    var max = 40;
+
+    class node{
+        constructor(val){
+            this.value = val;
+            this.left = null;
+            this.right= null;
+            this.heapId= Math.floor(Math.random()*max);
+            this.cnt=1;
+        }
+
+        display(x, y){
+            if (this.right)
+            {
+                ctx.beginPath();
+                ctx.moveTo(x,y);
+                ctx.lineTo(x+50, y+50);
+                ctx.stroke();
+            }
+            if (this.left)
+            {
+                ctx.beginPath();
+                ctx.moveTo(x,y);
+                ctx.lineTo(x-50, y+50);
+                ctx.stroke();
+            }
+
+            //display the node
+            fillCirc("black", x, y, 20);
+            fillCirc("white", x, y, 18);
+            drawText(this.value, x-5, y+3, 18, 'arial');
+            drawText("Id: "+ this.heapId, x-7, y+10, 13, 'arial')
+
+        }
+    }
+</script>
