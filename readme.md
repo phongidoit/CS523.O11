@@ -4,7 +4,7 @@
 # Nhóm 8  
 ## Thành viên nhóm:   
 - Trần Nhật Phong. MSSV: 21521276  
-- Thân Nguyễn Đức Hải. 21520810  
+- Thân Nguyễn Đức Hải. MSSV: 21520810  
 # Demo Treap  
 Try the demo visualization here: https://duchai263.github.io/    
 Source code của demo ở folder src  
